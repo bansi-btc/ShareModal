@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/7705d769d3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrapper" class="h-[100vh] w-full overflow-x-hidden overflow-y-auto bg-gray-900 relative flex items-center justify-center">
+        <!-- <div class="overlay bg-white h-full w-full absolute z-20" onclick="print()"></div> -->
+        <div class="filter h-full w-full bg-white opacity-[0] z-20 absolute scale-0 transition-all duration-300" onclick="closeModal()"></div>
+        <div class="modal bg-gray-800 text-gray-200 border-2 border-slate-600 absolute z-30 flex flex-col justify-start w-[400px] h-[200px] px-10 space-y-6 pt-6 pb-4  scale-0 rounded-lg transition-all duration-300 opacity-0">
+            <div class="Modal-header flex flex-row items-center justify-between border-b-2 border-slate-300 pb-1 text-2xl font-semibold">
+                <h1 class="text-2xl">Share My Profile</h1>
+                <div onclick="closeModal()" class="cursor-pointer"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+
+            <div class="flex flex-col justify-center space-y-4">
+                <p>Share this via</p>
+                <div class="flex flex-row justify-between items-center">
+                    <div class="h-8 w-8 flex flex-col items-center justify-center border-2 border-blue-600 rounded-full px-5 py-5 cursor-pointer">
+                    <i class="fa-brands fa-facebook-f text-blue-600 scale-150 "></i>
+
+                    </div>
+                    <div class="h-8 w-8 flex flex-col items-center justify-center border-2 border-blue-600 rounded-full px-5 py-5 cursor-pointer">
+                    <i class="fa-brands fa-twitter text-blue-600 scale-150 "></i>
+
+                    </div>
+                    <div class="h-8 w-8 flex flex-col items-center justify-center border-2 border-red-500 rounded-full px-5 py-5 cursor-pointer">
+                    <i class="fa-brands fa-instagram text-red-500 scale-150 "></i>
+
+                    </div>
+                    <div class="h-8 w-8 flex flex-col items-center justify-center border-2 border-green-500 rounded-full px-5 py-5 cursor-pointer">
+                        <i class="fa-brands fa-whatsapp text-green-500 scale-150 "></i>
+
+                    </div>
+                    <div class="h-8 w-8 flex flex-col items-center justify-center border-2 border-blue-600 rounded-full px-5 py-5 cursor-pointer">
+                    <i class="fa-brands fa-telegram text-blue-600 scale-150"></i>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-[100px] h-[150px] w-[150px] bg-red-500 rounded-full circle"></div>
+        <div class="absolute h-[180px] w-[180px] bg-purple-500 rounded-full circle2"></div>
+        <div class="card bg-gray-700 opacity-90 h-[360px] w-[300px] flex flex-col items-center justify-between rounded-md border-2 border-slate-500 py-8 z-10">
+
+            <div class="h-[150px] w-[150px] bg-white rounded-full overflow-hidden object-cover object-center">
+                <img src="emplo.jpeg" alt="">
+            </div>
+
+            <div id="name" class="text-2xl font-semibold font-sans text-white">Himanshu Gupta</div>
+            <div id="position" class="text-lg text-gray-400 font-semibold">Founder, Code Help</div>
+
+            <div class="buttons flex flex-row items-center gap-2 justify-center w-full">
+                <button onclick="openModal()" class="w-[42%] border-2 border-gray-400 py-[5px] text-white text-xs rounded-sm btn hover:bg-gray-300 hover:text-gray-900 duration-200 font-semibold flex flex-row items-baseline justify-center space-x-2"><i class="fa-solid fa-share"></i><span>Share My Profile</span> </button>
+                <button class="w-[42%] border-2 border-gray-400 py-[5px] text-white text-xs rounded-sm hover:bg-gray-300 hover:text-gray-900 duration-200 font-semibold flex items-center justify-center">Follow Me</button>
+                <!-- <button>Follow</button> -->
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
